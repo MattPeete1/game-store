@@ -8,7 +8,7 @@ import GamePurchaseHistoryPage from '../GamePurchaseHistoryPage/GamePurchaseHist
 
 
 export default function App() {
-  const [user, setUser] = useState({})
+  const [user, setUser] = useState(null)
   
   return (
     <main className="App">
@@ -17,7 +17,6 @@ export default function App() {
                 <NavBar />
                 <Routes>
                     <Route path="/orders/new" element={ <GamePurchasePage /> }/>
-                    |
                     <Route path="/orders" element={ <GamePurchaseHistoryPage /> }/>
                 </Routes>
             </>
