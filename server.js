@@ -20,6 +20,8 @@ const port = process.env.PORT || 3001;
 
 app.use('/api/users', require('./routes/api/users'));
 
+const ensureLoggedIn = require('./config/ensureLoggedIn');
+app.use('/api/games', ensureLoggedIn, require('./routes/api/games'));
 
 app.get('/*', function(req, res) {
   res.sendFile(path.join(__dirname, 'build', 'index.html'));

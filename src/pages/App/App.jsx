@@ -16,7 +16,7 @@ export default function App() {
         <>
           <NavBar user={user} setUser={setUser} />
           <Routes>
-            <Route path="/orders/new" element={ <GamePurchasePage /> }/>
+            <Route path="/orders/new" element={ <GamePurchasePage user={user} setUser={setUser} /> }/>
             <Route path="/orders" element={ <GamePurchaseHistoryPage /> }/>
           </Routes>
         </>

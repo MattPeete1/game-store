@@ -6,7 +6,7 @@ module.exports = {
 };
 
 async function index(req, res) {
-  const games = await Game.find({}).sort('name').populate('category').exec();
+  const games = await Game.find({}).sort('title').populate('category').exec();
   games.sort((a, b) => a.category.sortOrder - b.category.sortOrder);
   res.json(games);
 }
