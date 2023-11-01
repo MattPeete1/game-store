@@ -18,19 +18,15 @@ export default class SignUpForm extends Component {
     };
 
     handleSubmit = async (evt) => {
-        evt.preventDefault();
-
-        try {
-            const formData = {...this.state}
-            delete formData.error;
-            delete formData.confirm;
-            
-            const user = await signUp(formData);
-
-            console.log(user)
-        } catch {
-            this.setState({ error: 'Sign Up Failed - Please Try Again' });
-        }
+      evt.preventDefault();
+      try {
+        const {name, email, password} = this.state;
+        const formData = {name, email, password};
+        const user = await signUp(formData);
+        this.props.setUser(user);
+      } catch {
+        this.setState({ error: 'Sign Up Failed - Please Try Again' });
+      }
     };
 
     render() {
