@@ -11,9 +11,9 @@ export default function NavBar({ user, setUser }) {
         <nav>
             <span>Welcome, {user.name}</span>
             &nbsp; | &nbsp; 
-            <Link to="/orders/new">Purchase Games</Link>
+            <Link to="/purchases/new">Purchase Games</Link>
             &nbsp; | &nbsp;
-            <Link to="/orders">Game Purchase History</Link>
+            <Link to="/purchases">Game Purchase History</Link>
             &nbsp; | &nbsp;
             <Link to="" onClick={handleLogOut}>Log Out</Link>
         </nav>

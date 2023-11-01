@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Routes, Route } from 'react-router-dom';
+import { Routes, Route, Navigate } from 'react-router-dom';
 import './App.css';
 import { getUser } from '../../utilities/users-service';
 import AuthPage from '../AuthPage/AuthPage'
@@ -16,8 +16,10 @@ export default function App() {
         <>
           <NavBar user={user} setUser={setUser} />
           <Routes>
-            <Route path="/orders/new" element={ <GamePurchasePage user={user} setUser={setUser} /> }/>
-            <Route path="/orders" element={ <GamePurchaseHistoryPage /> }/>
+            <Route path="/purchases/new" element={<GamePurchasePage user={user} setUser={setUser} />} />
+            <Route path="/purchases" element={<GamePurchaseHistoryPage />} />
+            {}
+            <Route path="/*" element={<Navigate to="/purchases/new" />} />
           </Routes>
         </>
         :

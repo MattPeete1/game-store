@@ -1,11 +1,12 @@
 import './GameCatalog.css';
 import GameCatalogGame from '../GameCatalogGame/GameCatalogGame';
 
-export default function GameCatalog({ videoGames }) {
-  const games = videoGames.map(game =>
+export default function GameCatalog({ catalogGames, handleAddToOrder }) {
+  const games = catalogGames.map(game =>
     <GameCatalogGame
       key={game._id}
-      videoGame={game}
+      catalogGame={game}
+      handleAddToOrder={handleAddToOrder}
     />
   );
   return (

@@ -6,7 +6,7 @@ require('./config/database');
 const User = require('./models/user');
 const Game = require('./models/game');
 const Category = require('./models/category');
-// const Order = require('./models/order');
+const Purchase = require('./models/purchase');
 
-let user, game, category, order;
-let users, games, categories, orders;
+let user, game, category, purchase;
+let users, games, categories, purchases;
