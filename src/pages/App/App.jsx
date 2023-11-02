@@ -8,6 +8,9 @@ import GamePurchasePage from '../GamePurchasePage/GamePurchasePage';
 import GamePurchaseHistoryPage from '../GameShipPage/GameShipPage';
 import WishListPage from '../WishListPage/WishListPage'
 import WishEditPage from '../WishEditPage/WishEditPage';
+import GamePage from '../GamePage/GamePage';
+import GameDetailPage from '../GameDetailPage/GameDetailPage';
+import { localGames } from '../../data';
 
 
 export default function App() {
@@ -18,6 +21,9 @@ export default function App() {
         <>
           <NavBar user={user} setUser={setUser} />
           <Routes>
+          <Route path="/" element={<GamePage localGames={localGames} />} />
+            <Route path="/games/:gameName" element={<GameDetailPage localGames={localGames} />}
+            />
             <Route path="/purchases/new" element={<GamePurchasePage user={user} setUser={setUser} />} />
             <Route path="/purchases" element={<GamePurchaseHistoryPage />} />
             <Route path="/wishes" element={<WishListPage user={user}/>} />
