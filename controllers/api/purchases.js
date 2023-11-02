@@ -1,5 +1,4 @@
 const Purchase = require('../../models/purchase');
-// const Game = require('../../models/game');
 
 module.exports = {
   cart,

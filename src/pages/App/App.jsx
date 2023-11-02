@@ -6,7 +6,7 @@ import { getUser } from '../../utilities/users-service';
 import AuthPage from '../AuthPage/AuthPage'
 import NavBar from '../../components/NavBar/NavBar';
 import GamePurchasePage from '../GamePurchasePage/GamePurchasePage';
-import GamePurchaseHistoryPage from '../GameShipPage/GameShipPage';
+import GameShipPage from '../GameShipPage/GameShipPage';
 import WishListPage from '../WishListPage/WishListPage'
 import WishEditPage from '../WishEditPage/WishEditPage';
 import GamePage from '../GamePage/GamePage';
@@ -26,7 +26,7 @@ export default function App() {
             <Route path="/games/:gameName" element={<GameDetailPage games={games} />}
             />
             <Route path="/purchases/new" element={<GamePurchasePage user={user} setUser={setUser} />} />
-            <Route path="/purchases" element={<GamePurchaseHistoryPage />} />
+            <Route path="/purchases" element={<GameShipPage />} />
             <Route path="/wishes" element={<WishListPage user={user}/>} />
             <Route path="/wishes/:wishId" element={<WishEditPage user={user} />} />
             {}

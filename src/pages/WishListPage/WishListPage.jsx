@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom'
 import { useState, useEffect } from 'react'
 import { getWishes, createWish } from '../../utilities/wishes-api'
 import WishListForm from '../../components/WishListForm/WishListForm'
+import './WishListPage.css'
 
 export default function WishListPage({ user }) {
     const [wishes, setWishes] = useState([])
@@ -22,9 +23,10 @@ export default function WishListPage({ user }) {
     }
 
     return (
-        <div>
+        <div className='wish-page'>
             <h1>Your Game Wish List</h1>
-            <WishListForm handleSubmit={handleSubmit} formText={'Create'}/>
+            <div className='wForm'>
+                <WishListForm handleSubmit={handleSubmit} formText={'Create'}/>
             {wishes.length > 0 ? (
                 <>
                 {wishes.map(wish => (
@@ -37,6 +39,7 @@ export default function WishListPage({ user }) {
             ) : (
                 <p>No games have been added to you list!</p>
             )}
+        </div>
         </div>
     )
 }
