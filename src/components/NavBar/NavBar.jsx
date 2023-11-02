@@ -15,6 +15,8 @@ export default function NavBar({ user, setUser }) {
             &nbsp; | &nbsp;
             <Link to="/purchases">Game Purchase History</Link>
             &nbsp; | &nbsp;
+            <Link to="/wishes">View Your Wish List</Link>
+            &nbsp; | &nbsp;
             <Link to="" onClick={handleLogOut}>Log Out</Link>
         </nav>
     )

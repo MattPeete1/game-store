@@ -6,6 +6,8 @@ import AuthPage from '../AuthPage/AuthPage'
 import NavBar from '../../components/NavBar/NavBar';
 import GamePurchasePage from '../GamePurchasePage/GamePurchasePage';
 import GamePurchaseHistoryPage from '../GamePurchaseHistoryPage/GamePurchaseHistoryPage';
+import WishListPage from '../WishListPage/WishListPage'
+import WishEditPage from '../WishEditPage/WishEditPage';
 
 
 export default function App() {
@@ -18,6 +20,8 @@ export default function App() {
           <Routes>
             <Route path="/purchases/new" element={<GamePurchasePage user={user} setUser={setUser} />} />
             <Route path="/purchases" element={<GamePurchaseHistoryPage />} />
+            <Route path="/wishes" element={<WishListPage user={user}/>} />
+            <Route path="/wishes/:wishId" element={<WishEditPage user={user} />} />
             {}
             <Route path="/*" element={<Navigate to="/purchases/new" />} />
           </Routes>
