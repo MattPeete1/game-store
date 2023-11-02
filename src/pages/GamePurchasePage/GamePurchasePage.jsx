@@ -2,7 +2,7 @@ import { useState, useEffect, useRef } from 'react';
 import * as gamesAPI from '../../utilities/games-api';
 import * as purchasesAPI from '../../utilities/purchases-api';
 // import './GamePurchasePage.css';
-import { Link, useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import GameCatalog from '../../components/GameCatalog/GameCatalog';
 import CategoryList from '../../components/CategoryList/CategoryList';
 import PurchaseDetail from '../../components/PurchaseDetail/PurchaseDetail';

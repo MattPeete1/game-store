@@ -5,7 +5,7 @@ import { getUser } from '../../utilities/users-service';
 import AuthPage from '../AuthPage/AuthPage'
 import NavBar from '../../components/NavBar/NavBar';
 import GamePurchasePage from '../GamePurchasePage/GamePurchasePage';
-import GamePurchaseHistoryPage from '../GamePurchaseHistoryPage/GamePurchaseHistoryPage';
+import GamePurchaseHistoryPage from '../GameShipPage/GameShipPage';
 import WishListPage from '../WishListPage/WishListPage'
 import WishEditPage from '../WishEditPage/WishEditPage';
 

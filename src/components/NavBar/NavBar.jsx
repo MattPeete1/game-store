@@ -9,11 +9,9 @@ export default function NavBar({ user, setUser }) {
     
     return (
         <nav>
-            <span>Welcome, {user.name}</span>
+            <span>Welcome, {user.name} - {user.email}</span>
             &nbsp; | &nbsp; 
             <Link to="/purchases/new">Purchase Games</Link>
-            &nbsp; | &nbsp;
-            <Link to="/purchases">Game Purchase History</Link>
             &nbsp; | &nbsp;
             <Link to="/wishes">View Your Wish List</Link>
             &nbsp; | &nbsp;
