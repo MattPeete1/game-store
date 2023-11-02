@@ -8,6 +8,7 @@ export default function AuthPage({ setUser }) {
 
   return (
     <main className="AuthPage">
+        <div className='ti'>The Game Center</div>
       <div>
         <h3 onClick={() => setShowLogin(!showLogin)}>{showLogin ? 'SIGN UP' : 'LOG IN'}</h3>
       </div>

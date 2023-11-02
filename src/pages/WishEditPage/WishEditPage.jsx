@@ -24,6 +24,7 @@ export default function WishEditPage({ user }) {
                 <div className='edit-p-mat'>
                 <h1>Edit Your Wish List Game Info</h1>
                 { wish && <p>Game: {wish.text}</p> }
+                <p>If you are deleting a game (press delete once and navigate back)</p>
                 <WishListForm handleSubmit={handleSubmit} formText={'Edit'}/>
                 <button onClick={handleDelete}>Delete Wish List Item</button>
             </div>
