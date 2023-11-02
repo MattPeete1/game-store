@@ -1,4 +1,4 @@
-export const localGames = [
+export const games = [
     {
       "posterPath": "https://i.pinimg.com/564x/39/5c/40/395c40f8590d211e0b7aadf387361035.jpg",
       "releaseDate": "2018-10-26",

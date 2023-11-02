@@ -1,3 +1,4 @@
+import 'bootstrap/dist/css/bootstrap.min.css';
 import React, { useState } from 'react';
 import { Routes, Route, Navigate } from 'react-router-dom';
 import './App.css';
@@ -10,7 +11,7 @@ import WishListPage from '../WishListPage/WishListPage'
 import WishEditPage from '../WishEditPage/WishEditPage';
 import GamePage from '../GamePage/GamePage';
 import GameDetailPage from '../GameDetailPage/GameDetailPage';
-import { localGames } from '../../data';
+import { games } from '../../data';
 
 
 export default function App() {
@@ -21,8 +22,8 @@ export default function App() {
         <>
           <NavBar user={user} setUser={setUser} />
           <Routes>
-          <Route path="/" element={<GamePage localGames={localGames} />} />
-            <Route path="/games/:gameName" element={<GameDetailPage localGames={localGames} />}
+          <Route path="/" element={<GamePage games={games} />} />
+            <Route path="/games/:gameName" element={<GameDetailPage games={games} />}
             />
             <Route path="/purchases/new" element={<GamePurchasePage user={user} setUser={setUser} />} />
             <Route path="/purchases" element={<GamePurchaseHistoryPage />} />
