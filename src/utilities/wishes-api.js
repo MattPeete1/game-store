@@ -1,5 +1,5 @@
 import sendRequest from './send-request'
-const BASE_URL = 'https://project-4-diyd.onrender.com/api/wishes'
+const BASE_URL = 'https://project-4-q1m9.onrender.com/api/wishes'
 
 export async function createWish(wishData) {
     return sendRequest(BASE_URL, 'POST', wishData)

@@ -19,7 +19,7 @@
 - Bootstrap
 
 ## Getting Started
-Deoplyed App - 
+Deoplyed App - https://game-store-gqc7.onrender.com
 Trello Board - https://trello.com/b/CaWvCV28/project-4
 
 ## Icebox
