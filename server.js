@@ -4,8 +4,12 @@ const favicon = require('serve-favicon');
 const logger = require('morgan');
 require('dotenv').config();
 require('./config/database');
+const cors = require('cors')
 
 const app = express();
+
+const CLIENTDEVPORT = 5173
+app.use(cors({ origin: process.env.CLIENT_ORIGIN || `http://localhost:${CLIENTDEVPORT}` }))
 
 app.use(logger('dev'));
 app.use(express.json());

@@ -16,7 +16,11 @@ export default function WishEditPage({ user }) {
     }
 
     async function handleDelete() {
-        await deleteWish(wishId)
+        try {
+            await deleteWish(wishId);
+        } catch (error) {
+            console.error('Failed to delete wish:', error);
+        }
     }
 
     return (

@@ -1,6 +1,6 @@
 import sendRequest from './send-request';
 
-const BASE_URL = '/api/purchases';
+const BASE_URL = 'https://project-4-diyd.onrender.com/api/purchases';
 
 export function getCart() {
   return sendRequest(`${BASE_URL}/cart`);

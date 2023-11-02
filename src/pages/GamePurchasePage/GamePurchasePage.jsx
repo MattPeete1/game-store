@@ -7,7 +7,7 @@ import GameCatalog from '../../components/GameCatalog/GameCatalog';
 import CategoryList from '../../components/CategoryList/CategoryList';
 import PurchaseDetail from '../../components/PurchaseDetail/PurchaseDetail';
 
-export default function GamePurchasePage({}) {
+export default function GamePurchasePage() {
   const [catalogGames, setCatalogGames] = useState([]);
   const [activeCat, setActiveCat] = useState('');
   const [cart, setCart] = useState(null);

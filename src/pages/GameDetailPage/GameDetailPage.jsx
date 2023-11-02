@@ -7,7 +7,7 @@ export default function GameDetailPage({games}) {
 
   return (
     <div className="details-container">
-        <img src={`${game.posterPath}`}/>
+        <img src={`${game.posterPath}`} alt=""/>
       <div className="details-info">
         <h1>{game.title}</h1>
         <h3>Released: {new Date(game.releaseDate).toLocaleDateString()}</h3>

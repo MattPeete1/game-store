@@ -9,11 +9,11 @@ export default function WishListPage({ user }) {
 
     useEffect(() => {
         async function getUserWishes() {
-            const wishes = await getWishes(user._id)
-            setWishes(wishes)
+            const wishes = await getWishes(user._id);
+            setWishes(wishes);
         }
-        getUserWishes()
-    }, [])
+        getUserWishes();
+    }, [user._id]);
 
     async function handleSubmit(event) {
         event.preventDefault()
