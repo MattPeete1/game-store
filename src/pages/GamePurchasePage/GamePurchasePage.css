@@ -1,0 +1,35 @@
+.cats {
+    background-color: rgba(0, 0, 0, 0.638);
+    color: white;
+}
+
+.GamePurchasePage {
+    background-image: url('https://images.unsplash.com/photo-1605899435973-ca2d1a8861cf?auto=format&fit=crop&q=80&w=2625&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+    background-position: 50%;
+    height: 80rem;
+}
+
+.cats {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.cata {
+    background-color: rgba(0, 0, 0, 0.521);
+    color: white;
+    width: 50rem;
+    margin-top: 85px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+.purD {
+    background-color: rgba(0, 0, 0, 0.521);
+    color: white;
+    width: 50rem;
+    margin-top: 85px;
+    margin-right: auto;
+    margin-left: auto;
+}

@@ -1,7 +1,7 @@
 import { useState, useEffect, useRef } from 'react';
 import * as gamesAPI from '../../utilities/games-api';
 import * as purchasesAPI from '../../utilities/purchases-api';
-// import './GamePurchasePage.css';
+import './GamePurchasePage.css';
 import { useNavigate } from 'react-router-dom';
 import GameCatalog from '../../components/GameCatalog/GameCatalog';
 import CategoryList from '../../components/CategoryList/CategoryList';
@@ -48,22 +48,26 @@ export default function GamePurchasePage({}) {
 
   return (
     <main className="GamePurchasePage">
-      <aside>
+      <aside className='cats'>
         <CategoryList
           categories={categoriesRef.current}
           activeCat={activeCat}
           setActiveCat={setActiveCat}
         />
       </aside>
+      <div className='cata'>
       <GameCatalog
         catalogGames={catalogGames.filter(game => game.category.genre === activeCat)}
         handleAddToOrder={handleAddToOrder}
       />
+      </div>
+      <div className='purD'>
       <PurchaseDetail
         purchase={cart}
         handleChangeQty={handleChangeQty}
         handleCheckout={handleCheckout}
       />
+      </div>
     </main>
   );
 }
